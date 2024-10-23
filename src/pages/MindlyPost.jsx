@@ -22,12 +22,24 @@ import AddPhoto from "../assets/AddPhoto.png";
 // Script til skift af billeder
 const MindlyPost = () => {
   const [selectedMood, setSelectedMood] = useState(null);
+  const [photo, setPhoto] = useState(null); // State til gemt billede
 
   const handleMoodClick = (mood) => {
     setSelectedMood(mood);
   };
 
-  // Return af indhold
+  // Håndter billede-upload
+  const handlePhotoUpload = (e) => {
+    const file = e.target.files[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        setPhoto(reader.result); // Sætter preview af billedet
+      };
+      reader.readAsDataURL(file); // Læs fil som data-URL
+    }
+  };
+
   return (
     <div>
       <div className="MindlyPost-Overskrift">
@@ -111,13 +123,31 @@ const MindlyPost = () => {
 
       <div className="MindlyPost-AddPhoto">
         <h4>Add photo</h4>
-        <img src={AddPhoto} />
+        <input
+          type="file"
+          accept="image/*"
+          onChange={handlePhotoUpload}
+          style={{ display: "none" }}
+          id="photo-upload"
+        />
+        <label htmlFor="photo-upload">
+          <img
+            src={photo || AddPhoto} // Hvis der er uploadet billede, vis det. Ellers vis placeholder
+            alt="Upload"
+            style={{
+              width: "25%",
+              maxWidth: "300px", // Tilpas billedet til en passende størrelse til iPhone 12+ skærm
+              height: "auto",
+              cursor: "pointer",
+            }}
+          />
+        </label>
       </div>
 
       <div className="MindlyPost-PostKnap">
-        <button>
-          <p>Create Mindly</p>
-        </button>
+        <NavLink to="/profile">
+          <button>Create Mindly</button>{" "}
+        </NavLink>
       </div>
     </div>
   );

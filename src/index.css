@@ -40,6 +40,97 @@ body {
   box-sizing: border-box;
 }
 
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* Generel button styling */
+
+button {
+  outline: none;
+  border: none;
+  text-align: center;
+}
+
+button:active {
+  scale: 1.2;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  text-align: center;
+}
+
+body {
+  min-height: 100vh;
+
+  background-repeat: no-repeat;
+}
+
+/* Red Call-to-action button - For generel use */
+
+.cta_red {
+  background-color: var(--clr-red);
+  border-radius: 10px;
+  padding: 0.5rem 2.3rem;
+
+  color: var(--clr-white);
+  font-weight: var(--font-thin);
+
+  box-shadow: 1px 4px 4px var(--box-shadow);
+}
+
+.cta_red:active {
+  scale: 1.2;
+}
+
+h1 {
+  font-size: var(--font-h1);
+  font-weight: var(--font-bold);
+}
+
+h2 {
+  font-size: var(--font-h2);
+  font-weight: var(--font-bold);
+}
+
+h3 {
+  font-size: var(--font-h3);
+}
+
+h4 {
+  font-size: var(--font-h4);
+  font-weight: var(--font-thin);
+}
+
+p {
+  font-size: var(--font-p);
+  font-weight: var(--font-thin);
+}
+
+/* -----------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------- 
+-------------------------------------------------------------------------------------------------------------------- */
+
 /*Log In CSS start*/
 
 .login-overskrift {
@@ -163,6 +254,7 @@ input {
   text-align: left;
   margin-left: 4rem;
   font-weight: var(--font-regular);
+  font-size: large;
 }
 
 .signup-email h3 {
@@ -170,6 +262,7 @@ input {
   margin-bottom: 0.5rem;
   margin-left: 4rem;
   font-weight: var(--font-regular);
+  font-size: large;
 }
 
 .signup-button button {
@@ -185,7 +278,7 @@ input {
 }
 
 .signup-button p {
-  font-weight: var(--font-bold);
+  font-weight: var(--font-regular);
   font-size: var(--font-p);
 }
 
@@ -199,12 +292,13 @@ input {
 
 .signup-already-acc {
   z-index: 1;
-  margin-top: 14rem;
+  margin-top: 17rem;
   text-align: center;
 }
 
 .signup-already-acc a {
   color: var(--clr-black);
+  font-weight: bold;
 }
 
 /*SignUp CSS slut */
@@ -269,6 +363,7 @@ input {
   margin-bottom: 0.5rem;
   margin-left: 2.5rem;
   font-weight: var(--font-thin);
+  font-size: var(--font-h5);
 }
 
 .MindlyPost-Subject input {
@@ -299,6 +394,7 @@ input {
   margin-top: 1rem;
   font-weight: var(--font-thin);
   margin-left: 2.5rem;
+  font-size: var(--font-h5);
 }
 
 .MindlyPost-Smiley-Container {
@@ -311,6 +407,10 @@ input {
   padding: 0.8rem 0.4rem 0.4rem 0.4rem;
   width: 82%;
   border-radius: 10px;
+}
+
+.MindlyPost-Smiley {
+  display: flex;
 }
 
 .MindlyPost-Smiley img {
@@ -344,6 +444,7 @@ input {
   margin-bottom: 0.5rem;
   margin-left: 2.5rem;
   font-weight: var(--font-thin);
+  font-size: var(--font-h5);
 }
 
 .MindlyPost-AddPhoto img {
@@ -353,3 +454,142 @@ input {
 }
 
 /*Mindly Post Slut*/
+
+/* Home CSS */
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 40vh; /* Juster højde så den ikke fylder hele skærmen */
+  padding-bottom: 50px;
+  position: relative; /* Gør det muligt at bruge z-index og overlappe den hvide sektion */
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5); /* Bottom shadow */
+  z-index: 1; /* Placerer containeren foran den hvide sektion */
+  border-radius: 0 0 50px 50px; /* Buer på de nederste hjørner */
+  background: rgb(247, 117, 107);
+  background: linear-gradient(
+    225deg,
+    rgba(247, 117, 107, 1) 0%,
+    rgba(251, 198, 115, 1) 70%
+  );
+}
+
+.home-container h1 {
+  margin-top: 4rem;
+  font-size: 2.5rem;
+  font-weight: var(--font-bold);
+  margin-bottom: 1rem;
+}
+
+.home-container h2 {
+  margin-top: 1rem;
+  font-size: var(--font-h4);
+  font-weight: var(--font-regular);
+  margin-bottom: 0.5rem;
+}
+
+.home-container p {
+  font-size: var(--font-p);
+  font-weight: var(--font-thin);
+  text-align: center;
+  max-width: 80%;
+  line-height: 1.5;
+  margin-bottom: 3rem; /* Giver plads til den nye sektion */
+}
+
+.home-image {
+  max-width: 100%; /* Sørger for at billedet tilpasser sig containerens bredde */
+  height: auto; /* Bevarer billedets proportioner */
+  margin-top: -9.5rem; /* Tilføjer lidt plads over billedet */
+}
+
+/* Sektion med hvid baggrund */
+.latest-mindly-section {
+  width: 100%;
+  padding: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.latest-mindly-section h3 {
+  font-size: var(--font-h3);
+  color: var(--clr-black);
+  font-weight: var(--font-bold);
+  margin-bottom: 2rem;
+}
+
+.mindly-box {
+  display: flex; /* Brug flexbox for at placere den mindre boks ved siden af teksten */
+  align-items: flex-start; /* Juster elementerne i toppen */
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Let skygge */
+  width: 90%;
+  max-width: 600px;
+  margin: 0 auto; /* Centrering */
+  text-align: left;
+}
+
+.small-box {
+  width: 200px; /* Juster bredden på den mindre boks */
+  height: 80px; /* Juster højden på den mindre boks */
+
+  background: linear-gradient(
+    225deg,
+    rgba(247, 117, 107, 1) 0%,
+    rgba(251, 198, 115, 1) 70%
+  );
+  border-radius: 8px; /* Rundede hjørner */
+  margin-right: 1rem; /* Plads mellem den mindre boks og teksten */
+  display: flex; /* Brug flexbox for at centrere indholdet */
+  flex-direction: column; /* Stak indholdet lodret */
+
+  align-items: center; /* Centrér indholdet vandret */
+}
+
+.mindly-text {
+  flex-grow: 1; /* Gør teksten fleksibel for at fylde det resterende rum */
+  position: relative; /* Gør det muligt at positionere det lille billede i forhold til tekstområdet */
+}
+
+.small-image {
+  position: absolute; /* Absolut positionering for at placere billedet */
+  top: 1px; /* Juster afstand fra toppen */
+  right: 1px; /* Juster afstand fra højre side */
+  width: 20px; /* Juster bredde efter behov */
+  height: auto; /* Bevar proportioner */
+}
+
+.mindly-box h4 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  font-weight: var(--font-bold);
+}
+
+.mindly-box h3 {
+  font-size: 1rem;
+  font-weight: var(--font-thin);
+  color: var(--clr-grey);
+  line-height: 1.5;
+}
+
+.small-box-content {
+  text-align: center; /* Centrer tekst inde i small-box */
+}
+
+.small-box-header {
+  margin-top: 0.5rem;
+  font-size: 1.2rem; /* Størrelse for "OCT" */
+  font-weight: bold; /* Gør teksten fed */
+}
+
+.small-box-number {
+  margin-top: 0.8rem;
+  font-size: 1.5rem; /* Størrelse for "10" */
+  font-weight: bold; /* Gør teksten fed */
+}
+/* Home Slut */

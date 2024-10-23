@@ -32,7 +32,9 @@ const Login = () => {
 
       <div className="login-button">
         <button>
-          <p>Log In</p>
+          <p>
+            Log In <NavLink to="/Home">here</NavLink>
+          </p>
         </button>
       </div>
     </div>
