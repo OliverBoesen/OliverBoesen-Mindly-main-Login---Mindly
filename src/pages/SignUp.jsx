@@ -81,6 +81,7 @@ const SignUp = () => {
             placeholder="Enter your username"
             value={username}
             onChange={(e) => setUsername(e.target.value)} // Opdater brugernavn state ved inputændring
+            maxLength={10}
           />
         </div>
       </div>

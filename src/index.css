@@ -145,6 +145,10 @@ p {
   font-style: normal;
 }
 
+.error-message {
+  margin-bottom: 2rem;
+}
+
 .login-overskrift p {
   font-size: var(--font-p);
   font-weight: var(--font-thin);
@@ -594,3 +598,399 @@ input {
   font-weight: bold; /* Gør teksten fed */
 }
 /* Home Slut */
+
+/*Nikolines CSS*/
+
+/* --------------------------------- SETTINGS ----------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------- 
+-------------------------------------------------------------------------------------------------------------------- */
+
+.settings-front {
+  text-align: center;
+}
+
+.settings-front h1 {
+  padding-top: 100px;
+  font-size: 2rem;
+}
+
+.settings-front h2 {
+  font-size: 2rem;
+  padding: 20px 0 20px 0;
+}
+
+/* Centrere hele menu-items container */
+.menu-items {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.menu-personal,
+.menu-notifications,
+.menu-privacy {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  padding: 15px 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  max-width: 90%;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+}
+
+.menu-privacy {
+  margin-bottom: 2rem;
+}
+
+.icon,
+.arrow {
+  width: 25px;
+  height: 25 px;
+}
+
+.text {
+  flex: 1;
+  font-size: 16px;
+  color: #333;
+  text-align: left;
+  padding-left: 10px;
+  margin-top: 3px;
+}
+
+.cta_settings {
+  color: white;
+  background-color: #f7756b;
+  padding: 5px 20px;
+  border-radius: 10px;
+  text-decoration: underline;
+  font-weight: var(--font-thin);
+}
+
+/* --------------------------------- SETTINGS - PERSONAL ----------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------- 
+-------------------------------------------------------------------------------------------------------------------- */
+
+.name-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  padding: 15px 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  margin: 20px auto;
+}
+
+.left-section {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.label {
+  font-size: 14px;
+  align-items: left;
+}
+
+.name {
+  font-size: 14px;
+  font-weight: var(--font-thin);
+}
+
+.right-section {
+  display: grid;
+}
+
+.arrow-personal {
+  width: 4px;
+  height: 5px;
+}
+
+/* --------------------------------- SETTINGS - PERSONAL - NAME ----------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------- 
+-------------------------------------------------------------------------------------------------------------------- */
+
+.settings-front h3 {
+  font-size: 1rem;
+  font-weight: var(--font-thin);
+}
+
+.name-input {
+  font-weight: var(--font-thin);
+  background-color: white;
+  text-align: left;
+  padding: 15px 20px;
+  border-radius: 10px;
+  width: 80%;
+  margin: 20px auto;
+}
+
+.line {
+  position: relative;
+  width: 100%;
+  height: 1px;
+  background-color: #4c4c4c;
+  top: 26.9%;
+  align-items: center;
+}
+
+.save-name {
+  text-decoration: none;
+  font-weight: var(--font-regular);
+  padding: 5px 20px;
+  background-color: #f7756b;
+  color: white;
+  border-radius: 10px;
+}
+
+/* --------------------------------- SETTINGS - Language----------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------- 
+-------------------------------------------------------------------------------------------------------------------- */
+
+.language-overskrift {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.language-overskrift h1 {
+  font-size: var(--font-h2);
+}
+
+.language-overskrift p {
+  margin-top: 1rem;
+}
+
+.language-card {
+  display: flex;
+  justify-content: center; /* Centers the content horizontally */
+  align-items: center; /* Centers the content vertically */
+  position: relative;
+  margin: 1rem auto; /* Adjusts margin with auto to horizontally center the container itself */
+  background-color: white;
+  padding: 2rem;
+  width: 82%;
+  border-radius: 10px;
+}
+
+.language-card input {
+  width: 30px;
+  height: 30px;
+  margin-left: 2rem;
+  position: absolute;
+  right: 20px;
+}
+
+.language-card img {
+  width: 80px;
+  position: absolute;
+  left: 20px;
+}
+
+.language-card p {
+  margin-left: 3rem;
+}
+
+.language-confirm-button {
+  padding: 0.5rem;
+  background-color: var(--clr-red);
+  display: block;
+  margin: 2rem auto;
+  width: 13rem;
+  border-radius: 10px;
+  border: none;
+  box-shadow: var(--box-shadow);
+  font-size: var(--font-p);
+  font-weight: var(--font-thin);
+  text-align: center;
+  color: var(--clr-white);
+}
+
+/* --------------------------------- SETTINGS - NOTIFICATIONS----------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------- 
+-------------------------------------------------------------------------------------------------------------------- */
+.label-notifications {
+  font-size: 1.2rem;
+}
+.toogle {
+  margin-bottom: 3rem;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 25px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 2px;
+  bottom: 2.5px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #48ae4d;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #48ae4d;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(16px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 25px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+/* --------------------------------- SETTINGS - PRIVACY ----------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------- 
+-------------------------------------------------------------------------------------------------------------------- */
+.label-privacy {
+  font-weight: var(--font-thin);
+}
+
+.additional-text {
+  font-weight: var(--font-regular);
+  text-align: left;
+  padding-left: 45px;
+}
+
+/* --------------------------------- SETTINGS - DELETE -------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------- 
+-------------------------------------------------------------------------------------------------------------------- */
+.settings-delete {
+  margin-top: 4rem;
+}
+
+.delete-text {
+  margin: 2rem;
+}
+
+.delete-sad {
+  margin-bottom: 1rem;
+}
+
+.delete-sure {
+  font-weight: var(--font-bold);
+  margin-top: 2rem;
+}
+
+.delete-navigate {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.cta_delete {
+  background-color: #eaeaea;
+  color: #000;
+}
+
+/* --------------------------------- SETTINGS - DELETE - CONFIRM ---------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------- 
+-------------------------------------------------------------------------------------------------------------------- */
+.confirm-delete {
+  margin: 1.5rem;
+}
+.confirm-delete h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.confirm-delete p {
+  font-size: 1rem;
+}
+
+.confirm-delete-text {
+  margin-bottom: 30px;
+}
+
+.confirm-img {
+  margin: 40px 0 40px 0;
+}
+
+.confirm-text p {
+  font-size: 0.5rem;
+}
+
+.confirm-thank {
+  font-weight: var(--font-bold);
+  margin-top: 20px;
+}
+
+/* --------------------------------- ERROR 404 ---------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------- 
+-------------------------------------------------------------------------------------------------------------------- */
+
+.settings-front-error {
+  text-align: center;
+  margin-top: 10rem;
+}
+
+.error-not-found {
+  font-size: 2rem;
+  margin: 1rem;
+}
+
+.error-text {
+  margin: 2rem 2rem 3rem 2rem;
+}
+
+.error-panic {
+  font-weight: var(--font-bold);
+}
+
+.error-navigate {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.cta_error {
+  padding: 10px 15px;
+}

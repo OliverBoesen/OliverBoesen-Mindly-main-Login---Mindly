@@ -4,31 +4,32 @@ import myImage from "../assets/HomeScreen.png"; // Import the image
 import yourImage from "../assets/pencil.png"; // Import the image
 import { NavLink, useNavigate } from "react-router-dom"; // Importer NavLink til navigation og useNavigate til programmatisk navigation
 
+const quotes = [
+  "Even the smallest step forward is still a step in the right direction.",
+  "Believe you can and you're halfway there.",
+  "The only limit to our realization of tomorrow is our doubts of today.",
+  "The journey of a thousand miles begins with one step.",
+  "Success is not the key to happiness. Happiness is the key to success.",
+  "Don't watch the clock; do what it does. Keep going.",
+  "The harder you work for something, the greater you'll feel when you achieve it.",
+  "It does not matter how slowly you go as long as you do not stop.",
+  "Dream big and dare to fail.",
+  "Opportunities don't happen, you create them.",
+  "Your time is limited, so don’t waste it living someone else’s life.",
+];
+
 const Home = () => {
-  {
-    /* Daily queotes / random udkom */
-  }
+  const [username, setUsername] = useState("");
 
-  const quotes = [
-    "Even the smallest step forward is still a step in the right direction.",
-    "Believe you can and you're halfway there.",
-    "The only limit to our realization of tomorrow is our doubts of today.",
-    "The journey of a thousand miles begins with one step.",
-    "Success is not the key to happiness. Happiness is the key to success.",
-    "Don't watch the clock; do what it does. Keep going.",
-    "The harder you work for something, the greater you'll feel when you achieve it.",
-    "It does not matter how slowly you go as long as you do not stop.",
-    "Dream big and dare to fail.",
-    "Opportunities don't happen, you create them.",
-    "Your time is limited, so don’t waste it living someone else’s life.",
-  ];
-
-  {
-    /* Hent Username fra localstorage og placere ved siden af Hi */
-  }
+  useEffect(() => {
+    // Henter brugernavnet fra localStorage
+    const savedUsername = localStorage.getItem("username");
+    if (savedUsername) {
+      setUsername(savedUsername);
+    }
+  }, []);
 
   const [quote, setQuote] = useState("");
-  const [username] = useState("Username"); // Replace with dynamic user data if needed
 
   useEffect(() => {
     const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
