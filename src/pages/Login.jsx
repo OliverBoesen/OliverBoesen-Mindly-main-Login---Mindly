@@ -7,12 +7,16 @@ import { NavLink } from "react-router-dom";
 const Login = () => {
   return (
     <div>
+      {/* Overskrift og Under overskrift */}
+
       <div className="login-overskrift">
         <h1>Log In</h1>
         <p>
           Not a Mindly yet? Sign up <NavLink to="/Signup">here</NavLink>
         </p>
       </div>
+
+      {/* Forms til at logge ind */}
 
       <div className="login-container">
         <div className="login-username">
@@ -26,16 +30,18 @@ const Login = () => {
         </div>
       </div>
 
+      {/* Streg i bunden af skærmen */}
+
       <div className="login-streg">
         <img src={LoginStreg} alt="Log In Thumbnail" />
       </div>
 
+      {/* Login knap */}
+
       <div className="login-button">
-        <button>
-          <p>
-            Log In <NavLink to="/Home">here</NavLink>
-          </p>
-        </button>
+        <NavLink to="/Home">
+          <button> Log In here</button>
+        </NavLink>
       </div>
     </div>
   );

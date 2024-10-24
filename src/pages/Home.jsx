@@ -5,6 +5,10 @@ import yourImage from "../assets/pencil.png"; // Import the image
 import { NavLink, useNavigate } from "react-router-dom"; // Importer NavLink til navigation og useNavigate til programmatisk navigation
 
 const Home = () => {
+  {
+    /* Daily queotes / random udkom */
+  }
+
   const quotes = [
     "Even the smallest step forward is still a step in the right direction.",
     "Believe you can and you're halfway there.",
@@ -19,6 +23,10 @@ const Home = () => {
     "Your time is limited, so don’t waste it living someone else’s life.",
   ];
 
+  {
+    /* Hent Username fra localstorage og placere ved siden af Hi */
+  }
+
   const [quote, setQuote] = useState("");
   const [username] = useState("Username"); // Replace with dynamic user data if needed
 
@@ -29,6 +37,8 @@ const Home = () => {
 
   return (
     <>
+      {/* Velkommen til overskrift */}
+
       <div className="home-container">
         <h1>Hi, {username}</h1>
         <img
@@ -36,6 +46,9 @@ const Home = () => {
           alt="A descriptive text about the image"
           className="home-image"
         />
+
+        {/* Quote of the day */}
+
         <h2>Quote of the Day</h2>
         <p>{quote}</p>
         <NavLink to="/MindlyPost" className="cta_red">
@@ -53,7 +66,7 @@ const Home = () => {
               <p className="small-box-number">10</p>
             </div>
           </div>{" "}
-          {/* Small box */}
+          {/* Tekst i Mindly */}
           <div className="mindly-text">
             <h4>Today I Laughed</h4>
             <h3>

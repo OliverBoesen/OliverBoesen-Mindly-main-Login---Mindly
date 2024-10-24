@@ -135,7 +135,7 @@ p {
 
 .login-overskrift {
   text-align: center;
-  margin-top: 10rem;
+  margin-top: 8rem;
 }
 
 .login-overskrift h1 {
@@ -148,11 +148,13 @@ p {
 .login-overskrift p {
   font-size: var(--font-p);
   font-weight: var(--font-thin);
+  margin-top: 1rem;
 }
 
 .login-overskrift a {
   color: var(--clr-black);
   font-weight: var(--font-bold);
+  text-decoration: underline;
 }
 
 input {
@@ -173,12 +175,14 @@ input {
   margin-bottom: 0.5rem;
   text-align: left;
   margin-left: 4rem;
+  font-size: var(--font-h4);
 }
 
 .login-username h3 {
   text-align: left;
   margin-bottom: 0.5rem;
   margin-left: 4rem;
+  font-size: var(--font-h4);
 }
 
 .login-button button {
@@ -191,19 +195,15 @@ input {
   border-radius: 10px;
   border: none;
   box-shadow: var(--box-shadow);
-}
-
-.login-button p {
-  font-weight: var(--font-bold);
   font-size: var(--font-p);
+  font-weight: var(--font-thin);
 }
 
 .login-streg img {
   z-index: -1;
   position: relative;
   margin-top: -5rem;
-  margin-left: -1rem;
-  width: 26rem;
+  width: 30rem;
   height: 25rem;
 }
 
@@ -243,7 +243,7 @@ input {
 .signup-container {
   display: block;
   text-align: center;
-  margin-top: 1rem;
+  margin-top: 1.5rem;
 }
 
 .signup-password h3,
@@ -299,6 +299,7 @@ input {
 .signup-already-acc a {
   color: var(--clr-black);
   font-weight: bold;
+  text-decoration: underline;
 }
 
 /*SignUp CSS slut */
@@ -329,7 +330,7 @@ input {
 .MindlyPost-UnderOverskrift p {
   font-size: var(--font-p);
   font-weight: lighter;
-  margin-top: -13rem;
+  margin-top: 1rem;
 }
 
 .MindlyPost-streg-box {
@@ -346,15 +347,15 @@ input {
 .MindlyPost-Venstre img {
   width: 70px;
   height: 350px;
-  margin-top: -8rem;
-  margin-left: 6.6rem;
-  transform: rotate(-5deg);
+  position: absolute;
+  top: -18px;
+  right: 2px;
 }
 
 .MindlyPost-Subject {
   display: block;
   text-align: center;
-  margin-top: -6rem;
+  margin-top: 1rem;
 }
 
 .MindlyPost-Subject h3,

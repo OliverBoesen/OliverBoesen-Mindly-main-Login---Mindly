@@ -34,6 +34,7 @@ const MindlyPost = () => {
     if (file) {
       const reader = new FileReader();
       reader.onloadend = () => {
+        5;
         setPhoto(reader.result); // Sætter preview af billedet
       };
       reader.readAsDataURL(file); // Læs fil som data-URL
@@ -42,10 +43,12 @@ const MindlyPost = () => {
 
   return (
     <div>
+      {/* Overskrift */}
       <div className="MindlyPost-Overskrift">
         <h1>Feeling Grateful?</h1>
       </div>
 
+      {/* Steger i toppen af skærmen */}
       <div className="MindlyPost-streg-box">
         <div className="MindlyPost-Hoejre">
           <img src={HoejreStreg} alt="" />
@@ -56,11 +59,15 @@ const MindlyPost = () => {
         </div>
       </div>
 
+      {/* Under Overskrift */}
+
       <div className="MindlyPost-UnderOverskrift">
         <p>
           Write down your grateful thoughts and save it to your Mindly’s to keep
         </p>
       </div>
+
+      {/* Forms Emne og Tekst */}
 
       <div className="MindlyPost-Subject">
         <h3>Subject</h3>
@@ -71,6 +78,8 @@ const MindlyPost = () => {
         <h3>Text</h3>
         <textarea placeholder="Use this space to write your personal Mindly"></textarea>
       </div>
+
+      {/* Vælge humør ved hjælp af smileys */}
 
       <div className="mindly-post-smiley-box">
         <h3>Select your emotion</h3>
@@ -121,6 +130,8 @@ const MindlyPost = () => {
         </div>
       </div>
 
+      {/* Tilføj photo fra Fotobibliotek eller computer */}
+
       <div className="MindlyPost-AddPhoto">
         <h4>Add photo</h4>
         <input
@@ -143,6 +154,8 @@ const MindlyPost = () => {
           />
         </label>
       </div>
+
+      {/* Tilføj Mindly knap */}
 
       <div className="MindlyPost-PostKnap">
         <NavLink to="/profile">

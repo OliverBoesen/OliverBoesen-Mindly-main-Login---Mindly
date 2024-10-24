@@ -42,6 +42,8 @@ const SignUp = () => {
         </p>
       </div>
 
+      {/* Signup form til at oprette Konto */}
+
       <div className="signup-container">
         {error && <p className="error-message">{error}</p>}{" "}
         {/* Vis fejlmeddelelse, hvis der er en */}

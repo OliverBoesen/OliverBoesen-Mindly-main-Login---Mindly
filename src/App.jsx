@@ -11,7 +11,7 @@ function App() {
     <>
       <Routes>
         <Route path="/Home" element={<HomeScreen />} />
-        <Route path="/Login" element={<Login />} />
+        <Route path="*" element={<Login />} />
         <Route path="/Signup" element={<SignUp />} />
         <Route path="/MindlyPost" element={<MindlyPost />} />
       </Routes>
