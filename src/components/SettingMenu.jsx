@@ -1,3 +1,4 @@
+import React, { useEffect, useState } from "react"; // Importer React og useState-hooket
 import { NavLink } from "react-router-dom";
 import AppOpen from "../assets/AppOpen.png";
 import Person from "../assets/Profile.png";
@@ -6,14 +7,25 @@ import Lock from "../assets/Lock.png";
 import Arrow from "../assets/ArrowRight.png";
 
 export default function SettingMenu() {
+  const [username, setUsername] = useState(""); // State til at gemme brugernavnet
+
+  // Hent brugernavnet fra localStorage, når komponenten mountes
+  useEffect(() => {
+    const storedUserData = localStorage.getItem("user"); // Hent brugerdata fra localStorage
+    if (storedUserData) {
+      const userData = JSON.parse(storedUserData); // Parse JSON-strengen til et objekt
+      setUsername(userData.username); // Sæt brugernavnet i state
+    }
+  }, []);
+
   return (
     <div className="settings-front">
       <h1>Settings</h1>
       <div className="setting-img">
         <img src={AppOpen} alt="Mindly" />
       </div>
-      <h2>Nicolaj Pedersen</h2>
-
+      <h2>{username || "User"}</h2>{" "}
+      {/* Viser brugernavnet, eller "User" hvis det ikke er tilgængeligt */}
       <div className="menu-items">
         <NavLink to="/personal" className="menu-personal">
           <img src={Person} alt="Personal" className="icon" />

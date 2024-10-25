@@ -27,6 +27,7 @@ const SignUp = () => {
     // Gem brugerdata i local storage som en JSON-streng
     const userData = { email, password, username }; // Opret et objekt med brugerdata
     localStorage.setItem("user", JSON.stringify(userData)); // Gem brugerdata i local storage
+    localStorage.setItem("signupEmail", email); // Gem email i local storage
     setError(""); // Ryd eksisterende fejlmeddelelser
 
     // Naviger til login-siden efter succesfuld tilmelding

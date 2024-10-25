@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom"; // Import NavLink for navigation
 import USA from "../assets/USAFlag.png";
 import DK from "../assets/DanmarkFlag.png";
@@ -9,8 +9,18 @@ import FRA from "../assets/FrankrigFlag.png";
 const LanguageSelector = () => {
   const [selectedLanguage, setSelectedLanguage] = useState(null);
 
+  // Load selected language from localStorage on component mount
+  useEffect(() => {
+    const savedLanguage = localStorage.getItem("selectedLanguage");
+    if (savedLanguage) {
+      setSelectedLanguage(savedLanguage);
+    }
+  }, []);
+
   const handleLanguageChange = (language) => {
     setSelectedLanguage(language);
+    // Save the selected language to localStorage
+    localStorage.setItem("selectedLanguage", language);
     // Here you can add additional logic for translating the app
   };
 

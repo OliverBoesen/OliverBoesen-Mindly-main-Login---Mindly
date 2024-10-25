@@ -16,6 +16,8 @@ import SettingsPrivacy from "./pages/Settings/SettingsPrivacy";
 import SettingsDelete from "./pages/Settings/SettingsDelete";
 import SettingsConfirm from "./pages/Settings/SettingsConfirm";
 import Error from "./pages/Error";
+import SettingUsername from "./pages/Settings/SettingsUsername";
+import SettingPassword from "./pages/Settings/SettingsPassword";
 
 function App() {
   return (
@@ -37,7 +39,9 @@ function App() {
         <Route path="/privacy" element={<SettingsPrivacy />} />
         <Route path="/delete" element={<SettingsDelete />} />
         <Route path="/confirm-delete" element={<SettingsConfirm />} />
+        <Route path="/Username" element={<SettingUsername />} />
         <Route path="/error" element={<Error />} />
+        <Route path="/Password" element={<SettingPassword />} />
       </Routes>
     </>
   );

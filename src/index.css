@@ -717,38 +717,34 @@ input {
 /* --------------------------------- SETTINGS - PERSONAL - NAME ----------------------------------------------------
 -------------------------------------------------------------------------------------------------------------------- 
 -------------------------------------------------------------------------------------------------------------------- */
-
-.settings-front h3 {
-  font-size: 1rem;
-  font-weight: var(--font-thin);
+.settings-email h1 {
+  font-size: var(--font-h3);
+  text-align: center;
+  margin-top: 2rem;
 }
 
-.name-input {
-  font-weight: var(--font-thin);
-  background-color: white;
-  text-align: left;
-  padding: 15px 20px;
+.settings-email p {
+  font-size: var(--font-p);
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.save-email-button {
+  padding: 0.5rem;
+  background-color: var(--clr-red);
+  display: block;
+  margin: 1rem auto;
+  color: var(--clr-white);
+  width: 8rem;
   border-radius: 10px;
-  width: 80%;
-  margin: 20px auto;
+  border: none;
+  box-shadow: var(--box-shadow);
 }
 
-.line {
-  position: relative;
-  width: 100%;
-  height: 1px;
-  background-color: #4c4c4c;
-  top: 26.9%;
-  align-items: center;
-}
-
-.save-name {
-  text-decoration: none;
-  font-weight: var(--font-regular);
-  padding: 5px 20px;
-  background-color: #f7756b;
-  color: white;
-  border-radius: 10px;
+.settings-change-mail input {
+  width: 21rem;
+  margin: 2rem auto 4rem auto;
+  display: block;
 }
 
 /* --------------------------------- SETTINGS - Language----------------------------------------------------------------------
@@ -959,6 +955,72 @@ input:checked + .slider:before {
 .confirm-thank {
   font-weight: var(--font-bold);
   margin-top: 20px;
+}
+
+/* --------------------------------- Settings - Username ---------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------- 
+-------------------------------------------------------------------------------------------------------------------- */
+
+.settings-username h1 {
+  font-size: var(--font-h3);
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.settings-username p {
+  font-size: var(--font-p);
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.save-username-button {
+  padding: 0.5rem;
+  background-color: var(--clr-red);
+  display: block;
+  margin: 1rem auto;
+  color: var(--clr-white);
+  width: 8rem;
+  border-radius: 10px;
+  border: none;
+  box-shadow: var(--box-shadow);
+}
+
+.settings-change-username input {
+  width: 21rem;
+  margin: 2rem auto 4rem auto;
+  display: block;
+}
+
+.confirmation-message p {
+  font-size: var(--font-p);
+  font-weight: var(--font-regular);
+}
+
+/* --------------------------------- Settings - Password ---------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------- 
+-------------------------------------------------------------------------------------------------------------------- */
+
+.settings-password h1 {
+  font-size: var(--font-h3);
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.settings-password p {
+  font-size: var(--font-p);
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.settings-change-password input {
+  width: 21rem;
+  margin: 2rem auto 4rem auto;
+  display: block;
+}
+
+.error-message,
+.success-message {
+  text-align: center;
 }
 
 /* --------------------------------- ERROR 404 ---------------------------------------------------------------------
