@@ -5,26 +5,6 @@ import ArrowSettings from "../assets/ArrowSettings.png";
 export default function SettingMenu() {
   const [email, setEmail] = useState(""); // State til at gemme email
 
-  // Hent email fra localStorage, når komponenten mountes
-  useEffect(() => {
-    const storedEmail = localStorage.getItem("signupEmail"); // Hent email fra localStorage
-    if (storedEmail) {
-      setEmail(storedEmail); // Sæt email i state
-    }
-  }, []);
-
-  // Hent Brugernavn fra localstorage og vis under Username
-
-  const [username, setUsername] = useState("");
-
-  useEffect(() => {
-    // Henter brugernavnet fra localStorage
-    const savedUsername = localStorage.getItem("username");
-    if (savedUsername) {
-      setUsername(savedUsername);
-    }
-  }, []);
-
   return (
     <div className="settings-front">
       <h1>Personal information</h1>
@@ -32,7 +12,7 @@ export default function SettingMenu() {
       <NavLink to="/Name" className="name-card">
         <div className="left-section">
           <span className="label">Email</span>
-          <span className="name">{email || "Not set"}</span>{" "}
+          <span className="name">{"Change your Email"}</span>{" "}
           {/* Vis den hentede email eller "Not set" hvis den ikke findes */}
         </div>
         <div className="right-section">
@@ -43,7 +23,7 @@ export default function SettingMenu() {
       <NavLink to="/Username" className="name-card">
         <div className="left-section">
           <span className="label">Username</span>
-          <span className="name">{username}</span>
+          <span className="name">Change your username</span>
         </div>
         <div className="right-section">
           <img src={ArrowSettings} alt="Arrow" className="arrow-personal" />
